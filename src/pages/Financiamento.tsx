@@ -47,13 +47,15 @@ export default function Financiamento() {
 
         <div className="compare" style={{ marginTop: 24 }}>
           <div className="compare-col compare-col--a">
-            <h3>Existe hoje</h3>
+            <h3>Existe hoje (verificado, 2025–2026)</h3>
             <ul>
-              <li>Fundo Amazônia (doadores → BNDES → projetos)</li>
-              <li>Fundo Clima (crédito a taxas favorecidas)</li>
-              <li>RenovaBio e linhas verdes dos bancos públicos e privados</li>
-              <li>Cooperativas de crédito atuando em energia e agro</li>
-              <li>Títulos verdes corporativos e municipais</li>
+              <li><strong>Fundo Clima 2025:</strong> R$ 12,55 bi aprovados em 199 operações (transição energética liderou; florestas ×13)</li>
+              <li><strong>Fundo Amazônia 2025:</strong> mais de R$ 2 bi aprovados — maior volume anual da história</li>
+              <li><strong>Floresta+ Amazônia:</strong> R$ 5 mi em PSA no Amapá (mar/2026), com PNUD e GCF</li>
+              <li><strong>Decreto 13.018/2026:</strong> regulamenta a Lei 14.119/2021 (PSA) — CEPSA e Rede-PSA</li>
+              <li><strong>ICMS Ecológico</strong> em 17 estados; critério ambiental obrigatório no IBS (R$ 5,3 bi → R$ 10,4 bi/ano)</li>
+              <li>RenovaBio (CBIOs) e linhas verdes dos bancos públicos e privados</li>
+              <li>Títulos verdes corporativos e municipais; B3/ACX piloto de registro</li>
             </ul>
           </div>
           <div className="compare-col compare-col--b">
@@ -70,7 +72,7 @@ export default function Financiamento() {
 
         <NatureTag kind="proposta" />
         <div style={{ marginTop: 12 }}>
-          <SourceList ids={[11, 9, 10, 18]} />
+          <SourceList ids={[33, 34, 36, 30, 32, 10, 18]} />
         </div>
       </div>
     </section>

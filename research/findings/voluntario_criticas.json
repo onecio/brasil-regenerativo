@@ -1,0 +1,112 @@
+[
+  {
+    "tema": "Panorama global do precificacao de carbono e estagnacao do mercado voluntario",
+    "titulo_fonte": "Global Carbon Pricing Mobilizes Over $100 Billion for Public Budgets (State and Trends of Carbon Pricing 2025)",
+    "instituicao": "World Bank",
+    "url": "https://www.worldbank.org/en/news/press-release/2025/06/10/global-carbon-pricing-mobilizes-over-100-billion-for-public-budgets",
+    "data_acesso": "2026-08-27",
+    "ano": 2025,
+    "resumo": "Press release de 10/06/2025: receitas de precificacao de carbono superaram US$ 100 bilhoes em 2024; 80 instrumentos de precificacao em operacao; cerca de 28% das emissoes globais cobertas; no mercado de creditos de carbono, a demanda de mercados de conformidade quase triplicou em relacao ao ano anterior, enquanto o crescimento de compradores voluntarios foi 'negligivel'.",
+    "informacao_utilizada": "Receita global >US$ 100 bi em 2024; demanda de conformidade quase triplicou vs crescimento 'negligivel' no voluntario; 28% das emissoes cobertas; creditos de remocao baseada em natureza com premio de preco. Evidencia de estagnacao/encolhimento relativo do mercado voluntario.",
+    "confiabilidade": "Alta (instituicao multilateral, fonte primaria)"
+  },
+  {
+    "tema": "Criticas a adicionalidade no CDM (antecedente historico)",
+    "titulo_fonte": "Cames et al. (2016) 'How additional is the Clean Development Mechanism?' - via Repository of Articles on Offset Quality",
+    "instituicao": "Oko-Institut (estudo encomendado pela Comissao Europeia); citado pelo Berkeley Carbon Trading Project (UC Berkeley)",
+    "url": "https://gspp.berkeley.edu/berkeley-carbon-trading-project/repository-of-articles",
+    "data_acesso": "2026-08-27",
+    "ano": 2016,
+    "resumo": "Estudo de Cames et al. (2016) concluiu que 85% dos projetos de offset do CDM provavelmente nao sao adicionais (as reducoes ocorreriam mesmo sem o incentivo do programa) ou estao supercreditados, nao devendo ser contabilizados por outros paises em metas da UNFCCC.",
+    "informacao_utilizada": "85% dos projetos CDM provavelmente nao-adicionais ou supercreditados; base academica/historica das criticas de integridade que se estendem ao mercado voluntario.",
+    "confiabilidade": "Alta (estudo tecnico revisado, citado por repositorio academico da UC Berkeley)"
+  },
+  {
+    "tema": "Superestimativa sistemica de creditos (analise peer-reviewed ampla)",
+    "titulo_fonte": "Systematic assessment of the achieved emission reductions of carbon crediting projects",
+    "instituicao": "Nature Communications (artigo s41467-024-53645-z)",
+    "url": "https://www.nature.com/articles/s41467-024-53645-z",
+    "data_acesso": "2026-08-27",
+    "ano": 2024,
+    "resumo": "Avaliacao sistematica (peer-reviewed) conclui que menos de 16% dos creditos emitidos aos projetos investigados constituem reducoes reais de emissoes: 11% para fogoes melhorados, 16% para destruicao de SF6, 25% para desmatamento evitado, 68% para abatimento de HFC-23; sem reducoes estatisticamente significativas para projetos eolicos e de manejo florestal melhorado.",
+    "informacao_utilizada": "Menos de 16% dos creditos = reducoes reais; 25% para REDD/desmatamento evitado; evidencia quantitativa peer-reviewed de supercreditagem no mercado voluntario.",
+    "confiabilidade": "Alta (artigo peer-reviewed em Nature Communications, 2024)"
+  },
+  {
+    "tema": "Controversia Kariba REDD+ (Zimbabue) e investigacoes Guardian/Die Zeit/SourceMaterial",
+    "titulo_fonte": "Verra Acts on Kariba Project: Cancels Excess Credits, Advances Independent Review + The Guardian (2023)",
+    "instituicao": "Verra; The Guardian (com SourceMaterial e Die Zeit); Bloomberg; Follow the Money",
+    "url": "https://verra.org/verra-acts-on-kariba-project-cancels-excess-credits-advances-independent-review/",
+    "data_acesso": "2026-08-27",
+    "ano": 2025,
+    "resumo": "Verra reconheceu discrepancia na linha de base do projeto Kariba REDD+ e cancelou 15.220.520 creditos excedentes de 26.822.953 emitidos (~57%). Investigacoes anteriores (Guardian/Die Zeit/SourceMaterial, 2023) estimaram que ate 94% dos creditos de projetos florestais nao geram beneficio climatico real; Guardian (set/2023) achou que mais de 1/3 dos 50 maiores projetos tinha 3+ falhas fundamentais e que US$ 1,16 bi em creditos de projetos 'provavelmente-lixo' ja foram negociados; analistas citados pela Bloomberg estimaram superestimativa de 5 a 30x no Kariba. Follow the Money (2023) documentou que a South Pole reteve mais de 40% da receita (~US$ 100 mi) em vez dos 25% declarados.",
+    "informacao_utilizada": "15,22 mi de creditos excedentes cancelados pela Verra; 94% dos creditos florestais sem beneficio real (estimativa da investigacao); US$ 1,16 bi negociados de projetos 'provavelmente-lixo'; superestimativa Kariba de 5-30x (Bloomberg); comissao da South Pole >40% (Follow the Money).",
+    "confiabilidade": "Media-Alta (fonte primaria Verra + jornalismo investigativo; estimativas independentes contestadas pela Verra)"
+  },
+  {
+    "tema": "ICVCM Core Carbon Principles (resposta institucional as criticas de integridade)",
+    "titulo_fonte": "Integrity Council launches global benchmark for high-integrity carbon credits / The Core Carbon Principles",
+    "instituicao": "ICVCM (Integrity Council for the Voluntary Carbon Market)",
+    "url": "https://icvcm.org/core-carbon-principles",
+    "data_acesso": "2026-08-27",
+    "ano": 2023,
+    "resumo": "Em marco de 2023 o ICVCM publicou os 10 Core Carbon Principles (CCPs) e o Assessment Framework para rotular creditos de alta integridade (selo CCP). Os principios cobrem governanca, tracking em registro, adicionalidade, quantificacao robusta, permanencia (monitoramento >=40 anos e buffer pool contra reversao) e salvaguardas socioambientais (incluindo FPIC/consentimento livre, previo e informado de povos indigenas e comunidades locais). Programas CORSIA-eligible, que emitem >95% dos creditos do mercado, precisam comprovar criterios adicionais de governanca e transparencia.",
+    "informacao_utilizada": "Existencia e conteudo do padrao CCP como resposta as criticas de qualidade; exigencias de adicionalidade, permanencia (40 anos) e FPIC; reconhecimento implicito de que o mercado precisava de um piso de integridade.",
+    "confiabilidade": "Alta (fonte primaria do proprio ICVCM)"
+  },
+  {
+    "tema": "Dupla contagem e ajustes correspondentes (Artigo 6 do Acordo de Paris)",
+    "titulo_fonte": "Climate Explainer: Article 6",
+    "instituicao": "World Bank",
+    "url": "https://www.worldbank.org/en/news/feature/2022/05/17/what-you-need-to-know-about-article-6-of-the-paris-agreement",
+    "data_acesso": "2026-08-27",
+    "ano": 2022,
+    "resumo": "O Artigo 6 do Acordo de Paris estabelece que reducoes autorizadas para transferencia so podem ser contabilizadas por um pais na NDC; o mecanismo de 'corresponding adjustment' (ajuste correspondente) evita a dupla contagem. O World Bank alerta que o requisito pode se estender aos mercados voluntarios: por exemplo, a CORSIA (aviacao) deve exigir ajuste correspondente para creditos negociados.",
+    "informacao_utilizada": "Risco de dupla contagem quando creditos voluntarios sao usados por empresas em paises que tambem contam as reducoes na NDC do pais hospedeiro; ajuste correspondente como mitigacao; impacto crescente sobre o VCM.",
+    "confiabilidade": "Alta (instituicao multilateral, fonte primaria)"
+  },
+  {
+    "tema": "Controversia Northern Kenya Grassland Carbon Project (NRT) - terra e consentimento",
+    "titulo_fonte": "Kenya: Court halts flagship carbon offset project used by Meta, Netflix and British Airways over unlawfully acquiring community land without consent",
+    "instituicao": "Business & Human Rights Resource Centre (acobrindo decisao da Isiolo Environment and Land Court; caso Survival International/165 membros de comunidades)",
+    "url": "https://business-humanrights.org/en/latest-news/kenya-court-halts-flagship-carbon-offset-project-used-by-meta-netflix-british-airways-over-unlawfully-acquiring-public-land-without-community-consent",
+    "data_acesso": "2026-08-27",
+    "ano": 2025,
+    "resumo": "A Corte de Terras e Meio Ambiente de Isiolo (Quenia) decidiu em 2025 que duas das maiores conservancies criadas pela Northern Rangelands Trust (NRT) foram estabelecidas inconstitucionalmente, sem base legal e sem consentimento livre, previo e informado (FPIC) das comunidades (caso movido por 165 membros). Biliqo Bulesa, uma das conservancies, responde por ~20% dos creditos do projeto. A NRT ja vendeu mais de 6 milhoes de creditos para empresas como Meta, Netflix e British Airways; relatorio 'Blood Carbon' (Survival International) contesta a propria base cientifica do projeto. Verra reativou o projeto em 2026 apesar da decisao judicial, o que foi criticado por organizacoes indigenas.",
+    "informacao_utilizada": "Decisao judicial de 2025 declarando conservancies inconstitucionais; ~20% dos creditos de Biliqo Bulesa; 6 mi de creditos vendidos pela NRT; reativacao pela Verra apesar do caso judicial; alegacoes de coerção na assinatura de acordos.",
+    "confiabilidade": "Media-Alta (decisao judicial reportada por ONG de direitos humanos; alegações contestadas pela NRT)"
+  },
+  {
+    "tema": "Salvaguardas e consentimento livre, previo e informado (CLPI/FPIC) - Convencao 169 da OIT",
+    "titulo_fonte": "Carbon offset industry: major win for the Ka'apor People in Brazil against the carbon offset industry + Federal Public Prosecutor's Office v. State of Amazonas and FUNAI (Climate Case Chart)",
+    "instituicao": "SOMO (Center for Research on Multinational Corporations); Climate Litigation Database (Sabin Center/Columbia); InfoAmazonia",
+    "url": "https://www.somo.nl/a-major-legal-win-for-the-kaapor-people-in-brazil-against-the-carbon-offset-industry/",
+    "data_acesso": "2026-08-27",
+    "ano": 2025,
+    "resumo": "Em maio de 2025, corte federal do Maranhao suspendeu projeto REDD+ da Wildlife Works Brazil na Terra Indigena Ka'apor por ausencia de CLPI, violando a Constituicao brasileira e a Convencao 169 da OIT. Em novembro de 2024, o MPF ajuizou Acao Civil Publica contra o Estado do Amazonas e a FUNAI pedindo a suspensao de creditos de carbono de projeto REDD+ (SEMA/AM) por falta de consulta previa a comunidades indigenas e tradicionais (Convencao 169); liminar concedida. Investigacao da InfoAmazonia (2023) documentou contratos da Carbonext (afiliada da Shell) com paginas em branco assinadas por indigenas e comunidades que receberiam apenas 30% do valor de mercado dos creditos.",
+    "informacao_utilizada": "Dois casos judiciais brasileiros suspendendo projetos de carbono por falta de CLPI (Convencao 169 OIT); padrao de violacao de salvaguardas em projetos REDD+ em terras indigenas; 30% do valor de mercado para comunidades (caso Carbonext).",
+    "confiabilidade": "Alta (decisoes judiciais documentadas; investigacao jornalistica InfoAmazonia; empresas negam irregularidades)"
+  },
+  {
+    "tema": "Reparticao de beneficios em projetos comunitarios/florestais",
+    "titulo_fonte": "Cambodia: Carbon Offsetting Project Violates Indigenous Group's Rights (report 'Carbon Offsetting's Casualties')",
+    "instituicao": "Human Rights Watch; Follow the Money (para o caso Kariba/South Pole)",
+    "url": "https://www.hrw.org/news/2024/02/28/cambodia-carbon-offsetting-project-violates-indigenous-groups-rights",
+    "data_acesso": "2026-08-27",
+    "ano": 2024,
+    "resumo": "Relatorio da HRW (fev/2024) sobre o projeto Southern Cardamom REDD+ (Camboja, 500 mil hectares): o projeto operou mais de 2 anos sem consultar o povo indigena Chong, que sofreu despejos forcados e processos criminais; o projeto NAO tem acordo de reparticao de beneficios (benefit-sharing) com nenhuma das comunidades incluidas - os acordos existentes distribuem receita apenas entre Wildlife Alliance, Ministerio do Meio Ambiente e governo provincial. No caso Kariba, a Follow the Money documentou que a South Pole reteve mais de 40% da receita (~US$ 100 mi) em vez dos 25% declarados publicamente.",
+    "informacao_utilizada": "Ausencia de acordos de reparticao de beneficios com comunidades no Southern Cardamom; captura da maior parte da receita por intermediarios (South Pole >40% no Kariba); despejos e criminalizacao de comunidades.",
+    "confiabilidade": "Media-Alta (relatorio de ONG internacional com documentacao; verificacao jornalistica Follow the Money)"
+  },
+  {
+    "tema": "Custos de certificacao e MRV como barreira (pequenos projetos e comunidades)",
+    "titulo_fonte": "Verra's revised fees for carbon credits squeezes profits for traders, developers (S&P Global) + Thompson et al. 2013, REDD+ transaction costs (Ecology and Society)",
+    "instituicao": "S&P Global Commodity Insights; Ecology and Society (peer-reviewed)",
+    "url": "https://www.spglobal.com/energy/en/news-research/latest-news/energy-transition/031925-verras-revised-fees-for-carbon-credits-squeezes-profits-for-traders-developers",
+    "data_acesso": "2026-08-27",
+    "ano": 2025,
+    "resumo": "S&P Global (19/03/2025): a revisao de tarifas da Verra elevou substancialmente os custos de desenvolvimento de projetos - taxa inicial de US$ 5.000 por revisao de verificacao (incluindo US$ 2.500 de fee) alem de taxa de emissao de ~US$ 0,23/credito; desenvolvedores relatam margens comprimidas. Estudo peer-reviewed (Thompson et al., Ecology and Society, 2013) sobre custos de transacao de 6 projetos REDD+ no Peru estimou custos de US$ 0,16 a 1,44/ha/ano (media US$ 0,73) e apontou que custos de validacao/verificacao dependem fortemente da area e do desenho do projeto, com incerteza alta para paises em desenvolvimento; tais custos fixos pesam desproporcionalmente sobre pequenos projetos comunitarios.",
+    "informacao_utilizada": "Taxas da Verra: US$ 5.000 por revisao de verificacao + ~US$ 0,23/credito de emissao (2025); custos de transacao REDD+ US$ 0,16-1,44/ha/ano (2013); barreira para pequenos projetos e comunidades.",
+    "confiabilidade": "Media-Alta (S&P Global: fonte de mercado respeitada; Ecology and Society: artigo peer-reviewed)"
+  }
+]
