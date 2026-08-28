@@ -11,10 +11,12 @@ fato sem fonte verificada**; divergências entre estudos são apresentadas como 
 ```
 research/findings/
   regulado_brasil.json / .md            — ✓ completo (22 itens verificados)
-  voluntario_criticas.json / .md        — em execução (subagente)
-  dados_brasil.json / .md               — em execução (subagente)
-  financiamento_experiencias.json / .md — em execução (subagente)
+  voluntario_criticas.json / .md        — ✓ completo (10 itens verificados)
+  dados_brasil.json / .md               — ✓ completo (15 itens verificados)
+  financiamento_experiencias.json / .md — ✓ completo (9 itens verificados)
 ```
+
+Total: **56 itens verificados** (27/08/2026), todos com URL e data de acesso.
 
 ## R1 — Mercado regulado brasileiro (completo)
 
@@ -41,24 +43,41 @@ Fatos-chave verificados (agosto/2026):
 8. **Fiscalidade ambiental**: ICMS Ecológico em 17 estados; IBS Ecológico obrigatório (EC
    132/2023), estimativa de R$ 5,3 bi → R$ 10,4 bi/ano.
 
-## R2 — Mercado voluntário e críticas (em execução)
+## R2 — Mercado voluntário e críticas (completo)
 
-Escopo: padrões (Verra, Gold Standard, ART/TREES, Plan Vivo), ICVCM/CCP, VCMI, preços
-(Banco Mundial: receita global >US$100 bi em 2024), críticas (adicionalidade, dupla contagem,
-permanência, leakage, greenwashing), controvérsias documentadas (Kariba REDD+, Northern Kenya),
-custos de certificação como barreira, salvaguardas e CLPI.
+Fatos-chave verificados:
 
-## R3 — Dados Brasil (em execução)
+1. Banco Mundial (2025): receita global de precificação >US$ 100 bi em 2024; crescimento do
+   voluntário "negligível" frente ao compliance.
+2. Nature Communications (2024): <16% dos créditos investigados = reduções reais.
+3. Oko-Institut/Cames (2016): ~85% dos offsets do CDM não-adicionais ou supercreditados.
+4. Kariba REDD+: Verra cancelou 15,2 mi créditos (~57%) por erro de baseline (2025).
+5. Guardian/Die Zeit (2023): até 94% dos créditos florestais sem benefício real; US$ 1,16 bi
+   negociados de projetos "provavelmente-lixo".
+6. Salvaguardas: suspensão de REDD+ na TI Ka'apor (MA, 2025) por falta de CLPI; liminar
+   MPF/AM (2024); HRW Southern Cardamom sem repartição (2024).
+7. Custos: Verra US$ 5.000/revisão + US$ 0,23/crédito (S&P Global, 2025); transação REDD+
+   US$ 0,16–1,44/ha/ano (Thompson et al., 2013).
+8. Dupla contagem e ajustes correspondentes (Art. 6 Paris); ICVCM CCPs (permanência ≥40 anos,
+   FPIC).
 
-Escopo: SEEG (emissões por setor), INPE PRODES (desmatamento), IBGE Censo Agro 2017
-(agricultura familiar), ONS/MME (matriz elétrica), SNIS (saneamento), ABRELPE/Planares
-(resíduos), ABSOLAR/ANEEL (solar).
+## R3 — Dados Brasil (completo)
 
-## R4 — Financiamento e experiências (em execução)
+Verificados em fontes primárias: SEEG 13ª ed. (brutas 2,145 GtCO2e 2024; MUT 42%, Agro 29%,
+Energia 20%, Resíduos 5%, Processos 4%); PRODES (2023=9.064 km², 2024=6.288 km²); IBGE Censo
+Agro 2017 (3,897 mi estabelecimentos familiares = 77%; 80,9 mi ha = 23%; 67% da mão de obra);
+BEN 2025 (88,2% renováveis na matriz elétrica); SINISA 2024 (esgoto coletado 62,8%, tratado
+49,4%); ABREMA 2024 (81 Mt RSU; reciclagem 6,7 Mt; 41,5% disposição inadequada; 67,2% da
+reciclagem por catadores informais); Planares (orgânicos 45,3% da massa); ABSOLAR (43,7 GW
+GD solar).
 
-Escopo: Fundo Clima, Fundo Amazônia, Floresta+, ICMS/IBS Ecológico (já integrados do R1),
-Projeto Suruí, geração compartilhada (Lei 14.300/2022), cooperativas de energia, Ant Forest
-como referência de programa de pontos, cooperativas de crédito.
+## R4 — Financiamento e experiências (completo)
+
+Fundo Clima R$ 12,55 bi (2025); Fundo Amazônia R$ 2,2 bi em 22 operações (2025); Floresta+
+R$ 5,1 mi/368 agricultores/13 municípios (mar/2026); Decreto 13.018/2026 (PNPSA); ICMS/IBS
+Ecológico; Projeto Suruí (2009, VCS+CCB, Natura 120 mil tCO₂); COOPESMA (RO) e cooperativas
+solares em SC (5.080 cooperados); Ant Forest (750 mi usuários/619 mi árvores, NBER WP 34074);
+Sicoob (Pronaf Eco, Inovagro, US$ 70 mi BID Invest).
 
 ## Lacunas declaradas
 

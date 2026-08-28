@@ -1,7 +1,7 @@
 import SectionHead from '../components/SectionHead';
 import NatureTag from '../components/NatureTag';
 import FlowDiagram from '../components/FlowDiagram';
-import { SourceList } from '../components/SourceRef';
+import { SourceList, SourceRef } from '../components/SourceRef';
 
 const ACOES = [
   'Caminhada e bicicleta',
@@ -81,10 +81,23 @@ export default function Wallet() {
           <a className="btn btn--ghost" href="#/privacidade">Privacidade Primeiro</a>
         </div>
 
-        <div style={{ marginTop: 20 }}>
-          <NatureTag kind="proposta" />
-          <SourceList ids={[1, 19]} />
-        </div>
+            <details className="callout callout--warn">
+              <summary>Referência real: Ant Forest (Alipay, China)</summary>
+              <p style={{ fontSize: '0.88rem' }}>
+                O maior programa global de pontos por ações climáticas é o <strong>Ant Forest</strong>:
+                desde 2016, usuários ganham “energia verde” por ações de baixo carbono e trocam por
+                plantio real de árvores — <strong>750 milhões de usuários e 619 milhões de árvores
+                (2025)</strong>, com prêmio UNEP “Campeões da Terra” e evidência de spillovers
+                documentada em working paper do NBER. <SourceRef id={50} /> Ele inspira a
+                mecânica, mas um programa brasileiro teria que nascer com LGPD, auditoria pública e
+                regras antifraude desde o dia um.
+              </p>
+            </details>
+
+            <div style={{ marginTop: 20 }}>
+              <NatureTag kind="proposta" />
+              <SourceList ids={[1, 19]} />
+            </div>
       </div>
     </section>
   );

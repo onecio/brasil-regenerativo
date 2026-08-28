@@ -4,6 +4,10 @@ import NatureTag from '../components/NatureTag';
 import { ChipGroup } from '../components/Sim';
 import { SourceList } from '../components/SourceRef';
 
+function SourceRefCompat({ id }: { id: number }) {
+  return <a className="src-ref" href={`#/fontes#f${String(id).padStart(3, '0')}`}>[FONTE {String(id).padStart(3, '0')}]</a>;
+}
+
 type Ctx = 'brasil' | 'intl';
 
 const TABELAS: Record<Ctx, { dimensao: string; regulado: string; voluntario: string }[]> = {
@@ -117,12 +121,61 @@ export default function Mercados() {
             Hoje, o caminho mais acessível é o <strong>voluntário</strong> — mas ele exige metodologia
             aprovada, MRV e registro, com custos que a agregação ajuda a diluir. O futuro{' '}
             <strong>regulado</strong> pode criar demanda estável (e preço), mas as regras de quem pode
-            gerar CEVs e como a receita se distribui ainda estão em construção — por isso a plataforma
+            gerar CRVEs e como a receita se distribui ainda estão em construção — por isso a plataforma
             trata isso como <strong>proposta e cenário</strong>, não como fato consumado.
           </p>
         </details>
 
-        <SourceList ids={[1, 31, 32, 13, 14, 15, 16, 18, 20]} />
+        <h2 style={{ marginTop: 44 }}>Críticas fundamentadas ao mercado de carbono</h2>
+        <p style={{ color: 'var(--ink-soft)' }}>
+          Integridade exige ouvir as críticas — inclusive as mais duras. Estas são evidências
+          verificadas (2024–2026); a plataforma as trata como razão para <strong>exigir mais
+          rigor</strong>, não para descartar o instrumento.
+        </p>
+        <div className="grid grid--2">
+          <div className="card">
+            <h3 style={{ marginTop: 0 }}>Adicionalidade e superestimativa</h3>
+            <ul style={{ fontSize: '0.88rem' }}>
+              <li>Avaliação sistemática <em>peer-reviewed</em> (Nature Communications, 2024): <strong>menos de 16%</strong> dos créditos investigados representam reduções reais — variando por tipo (11% fogões, 16% SF6, 25% desmatamento evitado, 68% HFC-23). <SourceRefCompat id={46} /></li>
+              <li>Estudo do Oko-Institut encomendado pela Comissão Europeia (Cames et al., 2016): ~<strong>85% dos offsets do CDM</strong> provavelmente não-adicionais ou supercreditados.</li>
+              <li>Projeto Kariba (Zimbábue): a própria Verra cancelou <strong>15,2 milhões de créditos</strong> (≈57% dos emitidos) por erro de baseline (2025). <SourceRefCompat id={47} /></li>
+            </ul>
+          </div>
+          <div className="card">
+            <h3 style={{ marginTop: 0 }}>Controvérsias documentadas</h3>
+            <ul style={{ fontSize: '0.88rem' }}>
+              <li>Investigação Guardian/Die Zeit (2023): até <strong>94% dos créditos de projetos florestais</strong> sem benefício climático real; US$ 1,16 bi em créditos de projetos “provavelmente-lixo” já negociados.</li>
+              <li>Northern Kenya (NRT): corte local declarou inconstitucionais conservancies; mais de 6 mi de créditos vendidos a Meta, Netflix e British Airways. <SourceRefCompat id={48} /></li>
+              <li>Camboja (Southern Cardamom, HRW 2024): projeto operou sem consulta e <strong>sem acordo de repartição com comunidades</strong>. <SourceRefCompat id={54} /></li>
+            </ul>
+          </div>
+          <div className="card">
+            <h3 style={{ marginTop: 0 }}>Salvaguardas e direitos no Brasil</h3>
+            <ul style={{ fontSize: '0.88rem' }}>
+              <li>Corte federal do Maranhão <strong>suspendeu projeto REDD+ na TI Ka'apor</strong> por falta de consentimento livre, prévio e informado (CF/88 + Convenção 169 OIT) — 2025. <SourceRefCompat id={48} /></li>
+              <li>MPF/AM obteve liminar suspendendo créditos REDD+ estaduais por ausência de consulta prévia (2024).</li>
+              <li>Investigações apontam contratos com páginas em branco assinados por indígenas e repasse de ~30% do valor de mercado (InfoAmazonia, 2023).</li>
+            </ul>
+          </div>
+          <div className="card">
+            <h3 style={{ marginTop: 0 }}>Custos, dupla contagem e governança</h3>
+            <ul style={{ fontSize: '0.88rem' }}>
+              <li>Tarifas da Verra (S&P Global, 2025): US$ 5.000 por revisão de verificação + ~US$ 0,23/crédito — custos que pesam sobre pequenos projetos. <SourceRefCompat id={53} /></li>
+              <li>Estudos de transação em REDD+ (Thompson et al., 2013): US$ 0,16–1,44/ha/ano, peso desproporcional em pequenas áreas comunitárias.</li>
+              <li>Sem <strong>ajuste correspondente</strong> (Art. 6 do Acordo de Paris), a mesma tonelada pode ser contada duas vezes. <SourceRefCompat id={52} /></li>
+              <li>ICVCM/CCP respondem com requisitos de permanência (≥40 anos + buffer), adicionalidade e FPIC. <SourceRefCompat id={13} /></li>
+              <li>Enquanto isso, a receita global de precificação passou de US$ 100 bi em 2024, com o voluntário crescendo “de forma negligenciável” frente ao compliance (Banco Mundial). <SourceRefCompat id={45} /></li>
+            </ul>
+          </div>
+        </div>
+        <p style={{ fontSize: '0.85rem', color: 'var(--ink-soft)' }}>
+          <strong>Leitura da plataforma:</strong> essas falhas não são argumento contra a transição —
+          são argumento contra <em>integridade fraca</em>. Agregação, MRV compartilhado, salvaguardas
+          vinculantes e repartição de benefícios pactuada são exatamente a resposta estrutural que os
+          simuladores exploram.
+        </p>
+
+        <SourceList ids={[1, 31, 32, 13, 14, 15, 16, 18, 20, 45, 46, 47, 48, 52, 53, 54]} />
       </div>
     </section>
   );

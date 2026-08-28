@@ -34,7 +34,7 @@ export const PARTICIPANTES: Participante[] = [
   {
     nome: 'Agricultores familiares',
     emoji: '🚜',
-    descricao: '~5 milhões de estabelecimentos (77% do total, 23% da área — Censo Agro 2017). Potencial em SAF, recuperação de pasto e solo.',
+    descricao: '~3,9 milhões de estabelecimentos (77% do total, 23% da área, 67% da mão de obra — Censo Agro 2017). Potencial em SAF, recuperação de pasto e solo.',
     escala: 'Poucos ha por família',
     custoEntrada: 'Proporcionalmente altíssimo para certificação isolada',
     barreira: 'Escala, titulação, assistência técnica, custo de MRV, acesso a crédito',

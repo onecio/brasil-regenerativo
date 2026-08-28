@@ -51,9 +51,12 @@ export default function Financiamento() {
             <ul>
               <li><strong>Fundo Clima 2025:</strong> R$ 12,55 bi aprovados em 199 operações (transição energética liderou; florestas ×13)</li>
               <li><strong>Fundo Amazônia 2025:</strong> mais de R$ 2 bi aprovados — maior volume anual da história</li>
-              <li><strong>Floresta+ Amazônia:</strong> R$ 5 mi em PSA no Amapá (mar/2026), com PNUD e GCF</li>
+              <li><strong>Floresta+ Amazônia:</strong> R$ 5,1 mi em PSA para 368 agricultores de 13 municípios do Amapá (mar/2026)</li>
               <li><strong>Decreto 13.018/2026:</strong> regulamenta a Lei 14.119/2021 (PSA) — CEPSA e Rede-PSA</li>
               <li><strong>ICMS Ecológico</strong> em 17 estados; critério ambiental obrigatório no IBS (R$ 5,3 bi → R$ 10,4 bi/ano)</li>
+              <li><strong>Carbono comunitário indígena:</strong> Projeto Suruí (2009, VCS+CCB) — Natura comprou 120 mil tCO₂ em 2013; Fundo Suruí</li>
+              <li><strong>Cooperativas de energia:</strong> COOPESMA (RO) e 17 cooperativas em SC (5.080 cooperados) sob a Lei 14.300/2022</li>
+              <li><strong>Cooperativas de crédito:</strong> Sicoob com Pronaf Eco, Inovagro e aporte de US$ 70 mi do BID Invest (2025)</li>
               <li>RenovaBio (CBIOs) e linhas verdes dos bancos públicos e privados</li>
               <li>Títulos verdes corporativos e municipais; B3/ACX piloto de registro</li>
             </ul>
@@ -72,7 +75,7 @@ export default function Financiamento() {
 
         <NatureTag kind="proposta" />
         <div style={{ marginTop: 12 }}>
-          <SourceList ids={[33, 34, 36, 30, 32, 10, 18]} />
+          <SourceList ids={[33, 34, 36, 30, 32, 10, 18, 49, 51, 44]} />
         </div>
       </div>
     </section>

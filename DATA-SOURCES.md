@@ -57,6 +57,6 @@ rotina de verificação automática (ciclo de validação).
 ## Dossiês de pesquisa
 
 - `research/findings/regulado_brasil.md` — dossiê completo do SBCE (22 itens, ✓).
-- `research/findings/voluntario_criticas.*` — em execução.
-- `research/findings/dados_brasil.*` — em execução.
-- `research/findings/financiamento_experiencias.*` — em execução.
+- `research/findings/voluntario_criticas.md` — críticas fundamentadas (10 itens, ✓).
+- `research/findings/dados_brasil.md` — dados quantitativos (15 itens, ✓).
+- `research/findings/financiamento_experiencias.md` — experiências (9 itens, ✓).

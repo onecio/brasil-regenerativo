@@ -52,6 +52,19 @@ export default function Recicladores() {
         </div>
 
         <div className="card" style={{ marginTop: 24 }}>
+          <h3 style={{ marginTop: 0 }}>A fotografia nacional (dados verificados, 2023–2024)</h3>
+          <div className="grid grid--3" style={{ marginTop: 12 }}>
+            <div className="card" style={{ padding: 14 }}><div className="stat stat--amber" style={{ fontSize: '1.5rem' }}>81 Mt<small>/ano</small></div><div style={{ fontSize: '0.8rem', color: 'var(--ink-soft)' }}>Resíduos sólidos urbanos gerados (ABREMA 2024)</div></div>
+            <div className="card" style={{ padding: 14 }}><div className="stat stat--red" style={{ fontSize: '1.5rem' }}>41,5%<small> dos RSU</small></div><div style={{ fontSize: '0.8rem', color: 'var(--ink-soft)' }}>Disposição inadequada (lixões) — 2023</div></div>
+            <div className="card" style={{ padding: 14 }}><div className="stat stat--green" style={{ fontSize: '1.5rem' }}>6,7 Mt<small>/ano</small></div><div style={{ fontSize: '0.8rem', color: 'var(--ink-soft)' }}>Recicláveis secos recuperados (~8% dos secos)</div></div>
+            <div className="card" style={{ padding: 14 }}><div className="stat stat--cyan" style={{ fontSize: '1.5rem' }}>45,3%<small> da massa</small></div><div style={{ fontSize: '0.8rem', color: 'var(--ink-soft)' }}>Matéria orgânica nos RSU coletados (Planares 2018)</div></div>
+            <div className="card" style={{ padding: 14 }}><div className="stat stat--amber" style={{ fontSize: '1.5rem' }}>67,2%<small> da reciclagem</small></div><div style={{ fontSize: '0.8rem', color: 'var(--ink-soft)' }}>Feita por catadores informais — serviço ambiental invisível</div></div>
+            <div className="card" style={{ padding: 14 }}><div className="stat stat--green" style={{ fontSize: '1.5rem' }}>0,4%<small> compostado</small></div><div style={{ fontSize: '0.8rem', color: 'var(--ink-soft)' }}>Dos RSU — espaço enorme para biogás/compostagem</div></div>
+          </div>
+          <NatureTag kind="dado" />
+        </div>
+
+        <div className="card" style={{ marginTop: 16 }}>
           <h3 style={{ marginTop: 0 }}>O papel econômico de catadores e cooperativas</h3>
           <p style={{ fontSize: '0.92rem', color: 'var(--ink-soft)' }}>
             No Brasil, a coleta seletiva ainda alcança parcela minoritária dos municípios e a
@@ -64,7 +77,7 @@ export default function Recicladores() {
           <NatureTag kind="proposta" />
         </div>
 
-        <SourceList ids={[8, 24]} />
+        <SourceList ids={[8, 43, 42, 24]} />
       </div>
     </section>
   );
