@@ -14,6 +14,7 @@
 - [✓] Consolidação em src/data + registro de 54 fontes (verificação de URL automatizada)
 
 ## NÓ B — ARQUITETURA / DESIGN / DEV
+- [✓] **Design v2 (2026-08-27)**: tipografia local Sora/Inter/JetBrains Mono (variáveis, CSP 'self'); tokens refinados; elevação 3 níveis; hero editorial 2 colunas + painel "Brasil em números"; lista editorial numerada; reveal-on-scroll; logo com gradiente. Validado em produção (document.fonts + DOM + 0 erros CSP).
 - [✓] Identidade: Brasil Regenerativo — Carbono para Todos (paleta, tipografia, logo SVG)
 - [✓] Scaffold Vite + React 18 + TS strict + recharts + HashRouter
 - [✓] Home (hero, fluxo emissões→renda, quem participa, trilhas, princípio, CTA)
