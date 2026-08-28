@@ -4,6 +4,7 @@ import NatureTag from '../components/NatureTag';
 import { lerWallet, registrarAcao } from '../utils/points';
 import { fmtNum } from '../utils/format';
 import { SourceList } from '../components/SourceRef';
+import FichaTecnica from '../components/FichaTecnica';
 
 const ITENS = [
   { nome: 'Viagem de trem regional', emoji: '🚆', custo: 800, desc: 'Experiência de mobilidade sustentável' },
@@ -31,7 +32,7 @@ export default function Marketplace() {
   }
 
   return (
-    <section className="section">
+    <section className="section page-top">
       <div className="wrap" style={{ maxWidth: 900 }}>
         <SectionHead
           kicker="Simulação"
@@ -43,14 +44,19 @@ export default function Marketplace() {
               valor monetário ou obrigação de entrega.
             </>
           }
-        />
+        >
+          <div className="meta">
+            <NatureTag kind="cenario" />
+            <span className="chip" style={{ cursor: 'default' }}>Sem marcas reais · sem valor monetário</span>
+          </div>
+        </SectionHead>
 
         <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap', alignItems: 'center', marginBottom: 20 }}>
           <div className="card" style={{ flex: 1, minWidth: 240 }}>
-            <div style={{ fontSize: '0.8rem', color: 'var(--ink-soft)' }}>Seu saldo climático</div>
-            <div className="stat stat--green">{fmtNum(wallet.pontos)} pts</div>
-            <div style={{ fontSize: '0.8rem', color: 'var(--ink-soft)' }}>
-              Você evitou ≈ {fmtNum(wallet.kgCO2eTotal, 1)} kg CO₂e (estimativa educacional)
+            <div style={{ fontSize: '0.72rem', color: 'var(--muted)', fontFamily: 'var(--font-mono)', textTransform: 'uppercase', letterSpacing: '0.08em' }}>Saldo climático</div>
+            <div className="stat stat--green" style={{ fontVariantNumeric: 'tabular-nums' }}>{fmtNum(wallet.pontos)} pts</div>
+            <div style={{ fontSize: '0.8rem', color: 'var(--muted)' }}>
+              Você evitou ≈ <span className="mono">{fmtNum(wallet.kgCO2eTotal, 1)}</span> kg CO₂e (estimativa educacional)
             </div>
           </div>
           <button type="button" className="btn btn--primary" onClick={ganhar}>+ Ganhar pontos (demo: pedalar 1 km)</button>
@@ -86,6 +92,16 @@ export default function Marketplace() {
         <NatureTag kind="cenario" />
         <div style={{ marginTop: 16 }}>
           <SourceList ids={[23, 21]} />
+          <FichaTecnica
+            premissas={[
+              { k: 'Pontos', v: 'Acumulados nas simulações (Carbon Wallet) — saldo local' },
+              { k: 'Itens de resgate', v: '100% fictícios; sem marcas reais' },
+              { k: 'Custos em pontos', v: '220 a 1.500 pts, definidos para a demonstração' },
+              { k: 'Valor monetário', v: 'Inexistente — os pontos não são moeda nem crédito de carbono' },
+            ]}
+            fontes={[23, 21]}
+            nota="Marketplace educacional para demonstrar a mecânica de incentivos. Um programa real exigiria política pública ou parceria formal, antifraude e prestação de contas."
+          />
         </div>
       </div>
     </section>

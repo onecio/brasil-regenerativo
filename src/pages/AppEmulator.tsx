@@ -1,9 +1,11 @@
 import { useState } from 'react';
 import SectionHead from '../components/SectionHead';
+import NatureTag from '../components/NatureTag';
 import FlowDiagram from '../components/FlowDiagram';
 import { ACOES, lerWallet, registrarAcao } from '../utils/points';
 import { fmtNum } from '../utils/format';
 import { SourceList } from '../components/SourceRef';
+import FichaTecnica from '../components/FichaTecnica';
 
 export default function AppEmulator() {
   const [wallet, setWallet] = useState(lerWallet());
@@ -18,7 +20,7 @@ export default function AppEmulator() {
   const pctHoje = Math.min((wallet.historico.filter((h) => new Date(h.ts).toISOString().slice(0, 10) === new Date().toISOString().slice(0, 10)).length / 6) * 100, 100);
 
   return (
-    <section className="section">
+    <section className="section page-top">
       <div className="wrap">
         <SectionHead
           kicker="Protótipo de app"
@@ -31,7 +33,13 @@ export default function AppEmulator() {
               <strong>não equivalem automaticamente a créditos de carbono negociáveis</strong>.
             </>
           }
-        />
+        >
+          <div className="meta">
+            <NatureTag kind="conceito" />
+            <span className="chip" style={{ cursor: 'default' }}>100% local · LGPD desde a concepção</span>
+            <span className="chip" style={{ cursor: 'default' }}>Referência: Ant Forest (750 mi usuários)</span>
+          </div>
+        </SectionHead>
 
         <div style={{ marginBottom: 24 }}>
           <FlowDiagram steps={['Ação cotidiana', 'Registro (verificável)', 'Pontos Climáticos', 'Benefícios educacionais/incentivos', 'Impacto acumulado']} label="Fluxo do Carbon Wallet" />
@@ -45,8 +53,8 @@ export default function AppEmulator() {
               <div style={{ padding: '0 14px' }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '10px 0' }}>
                   <div>
-                    <div style={{ fontSize: '0.7rem', color: '#8fc3a8' }}>Carbon Wallet</div>
-                    <div style={{ fontWeight: 700 }}>🌱 {fmtNum(wallet.pontos)} pts</div>
+                    <div style={{ fontSize: '0.7rem', color: '#8fc3a8', fontFamily: 'var(--font-mono)', letterSpacing: '0.08em' }}>CARBON WALLET</div>
+                    <div style={{ fontWeight: 700, fontVariantNumeric: 'tabular-nums' }}>🌱 {fmtNum(wallet.pontos)} pts</div>
                   </div>
                   <button type="button" onClick={() => setFullscreen(!fullscreen)} style={{ background: 'rgba(255,255,255,.1)', border: 'none', color: '#d9f2e5', borderRadius: 10, padding: '6px 10px', cursor: 'pointer' }}>
                     {fullscreen ? '✕' : '⛶'}
@@ -65,12 +73,12 @@ export default function AppEmulator() {
                 {tab === 'home' && (
                   <div>
                     <div style={{ background: 'linear-gradient(135deg, #11523d, #1f8f68)', borderRadius: 16, padding: 16, marginBottom: 12 }}>
-                      <div style={{ fontSize: '0.72rem', color: '#b9e4cd' }}>PEGADA DIÁRIA (indicador)</div>
-                      <div style={{ fontSize: '1.6rem', fontWeight: 800 }}>~{fmtNum(Math.max(wallet.kgCO2eTotal * 0.12, 0), 1)} kg CO₂e</div>
+                      <div style={{ fontSize: '0.68rem', color: '#b9e4cd', fontFamily: 'var(--font-mono)', letterSpacing: '0.08em' }}>PEGADA DIÁRIA (INDICADOR)</div>
+                      <div style={{ fontSize: '1.6rem', fontWeight: 800, fontVariantNumeric: 'tabular-nums' }}>~{fmtNum(Math.max(wallet.kgCO2eTotal * 0.12, 0), 1)} kg CO₂e</div>
                       <div className="meter" style={{ background: 'rgba(255,255,255,.25)', marginTop: 8 }}>
                         <span style={{ width: `${pctHoje}%`, background: 'linear-gradient(90deg,#fde68a,#fff)' }} />
                       </div>
-                      <div style={{ fontSize: '0.68rem', color: '#d7f2e3', marginTop: 4 }}>estimativa educacional</div>
+                      <div style={{ fontSize: '0.64rem', color: '#d7f2e3', marginTop: 4, fontFamily: 'var(--font-mono)' }}>estimativa educacional · fatores declarados</div>
                     </div>
                     <div style={{ background: 'rgba(255,255,255,.07)', borderRadius: 16, padding: 14, marginBottom: 12 }}>
                       <div style={{ fontSize: '0.78rem', color: '#9fc4b2' }}>Sequência de dias</div>
@@ -174,6 +182,16 @@ export default function AppEmulator() {
               <a className="btn btn--ghost" href="#/privacidade">Privacidade Primeiro</a>
             </div>
             <SourceList ids={[21, 22, 23]} />
+            <FichaTecnica
+              premissas={[
+                { k: 'Pontos por ação', v: '5–15 conforme a ação (caminhada 5 · bike 8 · coletivo 10–12 · reciclagem 6 · compostagem 8 · solar 15)' },
+                { k: 'CO₂e estimado', v: '0 a 2,0 kg por ação — fatores educacionais declarados' },
+                { k: 'Armazenamento', v: 'LocalStorage local, prefixo próprio, máx. 200 registros, sem dados sensíveis' },
+                { k: 'Natureza', v: 'Unidade educacional/incentivo — não é crédito de carbono (§21)' },
+              ]}
+              fontes={[21, 22, 23, 50]}
+              nota="Referência global: Ant Forest (Alipay) — 750 mi usuários, 619 mi árvores (NBER WP 34074). Programa brasileiro exigiria LGPD, auditoria pública e antifraude desde o dia um."
+            />
           </div>
         </div>
       </div>
