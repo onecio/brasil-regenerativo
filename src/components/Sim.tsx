@@ -121,12 +121,12 @@ export function ResultCard({
   kind?: 'green' | 'amber' | 'cyan' | 'red' | 'plain';
 }) {
   return (
-    <div className="card">
-      <div style={{ fontSize: '0.8rem', fontWeight: 600, color: 'var(--ink-soft)', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
+    <div className="card" style={{ padding: 20 }}>
+      <div style={{ fontSize: '0.74rem', fontWeight: 600, color: 'var(--muted)', textTransform: 'uppercase', letterSpacing: '0.08em' }}>
         {label}
       </div>
-      <div className={`stat stat--${kind}`}>{value}</div>
-      {hint && <div style={{ fontSize: '0.82rem', color: 'var(--ink-soft)' }}>{hint}</div>}
+      <div className={`stat stat--${kind}`} style={{ fontSize: '1.7rem', marginTop: 6 }}>{value}</div>
+      {hint && <div style={{ fontSize: '0.8rem', color: 'var(--muted)', marginTop: 4 }}>{hint}</div>}
     </div>
   );
 }

@@ -18,9 +18,15 @@ export default function TopBar() {
       <div className="wrap topbar-inner">
         <Link to="/" className="brand" onClick={() => setOpen(false)}>
           <svg className="logo" viewBox="0 0 40 40" aria-hidden="true">
-            <circle cx="20" cy="20" r="19" fill="#0b3d2e" />
-            <path d="M20 6c6 5 10 10 10 17a10 10 0 0 1-20 0C10 16 14 11 20 6Z" fill="#3fb284" />
-            <path d="M20 12c3 3 5 6 5 10a5 5 0 0 1-10 0c0-4 2-7 5-10Z" fill="#fbbf24" />
+            <defs>
+              <linearGradient id="lg1" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stopColor="#177052" />
+                <stop offset="1" stopColor="#0b3527" />
+              </linearGradient>
+            </defs>
+            <rect x="1" y="1" width="38" height="38" rx="11" fill="url(#lg1)" />
+            <path d="M20 7c5.6 4.6 9.2 9.4 9.2 15.6A9.2 9.2 0 0 1 20 31.8a9.2 9.2 0 0 1-9.2-9.2C10.8 16.4 14.4 11.6 20 7Z" fill="#3db487" />
+            <path d="M20 13.5c2.8 2.7 4.6 5.5 4.6 9a4.6 4.6 0 0 1-9.2 0c0-3.5 1.8-6.3 4.6-9Z" fill="#fbbf24" />
           </svg>
           <span>Brasil Regenerativo</span>
         </Link>
