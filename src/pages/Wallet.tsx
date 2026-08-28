@@ -1,7 +1,7 @@
 import SectionHead from '../components/SectionHead';
 import NatureTag from '../components/NatureTag';
 import FlowDiagram from '../components/FlowDiagram';
-import { SourceList, SourceRef } from '../components/SourceRef';
+import SourceRef, { SourceList } from '../components/SourceRef';
 
 const ACOES = [
   'Caminhada e bicicleta',
