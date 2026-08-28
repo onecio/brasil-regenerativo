@@ -6,6 +6,7 @@ import { SliderCtl, ChipGroup, ResultCard } from '../components/Sim';
 import { calcBiodigestor, BIOGAS_POR_ANIMAL } from '../utils/carbon';
 import { fmtNum, fmtTons } from '../utils/format';
 import { SourceList } from '../components/SourceRef';
+import FichaTecnica from '../components/FichaTecnica';
 
 export default function Biodigestor() {
   const [especie, setEspecie] = useState<'bovino' | 'suino' | 'frango'>('bovino');
@@ -16,7 +17,7 @@ export default function Biodigestor() {
   const r = calcBiodigestor({ especie, animais, diasUso: dias, ch4Percent: ch4 });
 
   return (
-    <section className="section">
+    <section className="section page-top">
       <div className="wrap">
         <SectionHead
           kicker="Simulador"
@@ -28,7 +29,11 @@ export default function Biodigestor() {
               literatura — projeto real exige engenharia e, para crédito, metodologia e MRV.
             </>
           }
-        />
+        >
+          <div className="meta">
+            <NatureTag kind="estimativa" />
+          </div>
+        </SectionHead>
 
         <div style={{ marginBottom: 24 }}>
           <FlowDiagram steps={['Dejetos', 'Biodigestor', 'Biogás (CH₄)', 'Energia + biofertilizante', 'Metano evitado', 'Possível projeto climático']} label="Fluxo do biodigestor" />
@@ -36,7 +41,7 @@ export default function Biodigestor() {
 
         <div className="sim">
           <div className="sim-controls">
-            <h3 style={{ marginTop: 0 }}>Configuração</h3>
+            <h3 className="ctl-group">Configuração</h3>
             <ChipGroup label="Tipo de criação" value={especie} onChange={setEspecie}
               options={Object.entries(BIOGAS_POR_ANIMAL).map(([v, info]) => ({ value: v as 'bovino' | 'suino' | 'frango', label: info.label }))} />
             <SliderCtl label="Animais" value={animais} min={1} max={2000} step={1} onChange={setAnimais} />
@@ -63,6 +68,18 @@ export default function Biodigestor() {
             </details>
 
             <SourceList ids={[25, 4, 14]} />
+            <FichaTecnica
+              premissas={[
+                { k: 'Bovino de leite', v: '~0,40 m³ biogás/animal/dia (faixa de literatura)' },
+                { k: 'Suíno', v: '~0,08 m³ biogás/animal/dia' },
+                { k: 'Frango', v: '~0,003 m³ biogás/100 aves/dia' },
+                { k: 'Densidade CH₄', v: '0,717 kg/m³' },
+                { k: 'GWP CH₄', v: '28 (IPCC AR5)' },
+                { k: 'Energia', v: '1 m³ biogás (60% CH₄) ≈ 6 kWh térmicos; rendimento elétrico 30% (educacional)' },
+              ]}
+              fontes={[25, 4, 14]}
+              nota="Faixas de literatura (Texas A&M AgriLife / FAO / Embrapa). Produção real varia com raça, dieta, manejo e clima. Crédito de carbono exigiria metodologia, MRV e verificação."
+            />
           </div>
         </div>
       </div>

@@ -536,6 +536,66 @@ details.callout--danger summary { color: var(--danger); }
   white-space: nowrap;
 }
 
+/* ============ OBSERVATÓRIO: cabeçalho de página interna ============ */
+.page-top { padding: 60px 0 12px; }
+.page-top .section-head { margin-bottom: 26px; }
+.page-top h1 { font-size: clamp(1.9rem, 4.2vw, 3rem); font-weight: 800; }
+.page-top .section-head p { font-size: 1.06rem; }
+.page-top .meta { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 14px; }
+
+/* ============ OBSERVATÓRIO: grupos de controles ============ */
+.ctl-group {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 24px 0 12px;
+  padding-top: 18px;
+  border-top: 1px dashed var(--line-2);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.ctl-group::after { content: ''; flex: 1; height: 1px; background: var(--line-2); }
+.ctl-group:first-of-type { margin-top: 0; border-top: none; padding-top: 0; }
+.sim-controls > h3:not(.ctl-group) { font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); margin: 24px 0 12px; padding-top: 18px; border-top: 1px dashed var(--line-2); }
+.sim-controls > h3:not(.ctl-group):first-child { margin-top: 0; border-top: none; padding-top: 0; }
+
+/* ============ OBSERVATÓRIO: ficha técnica ============ */
+details.ficha {
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  margin-top: 22px;
+  overflow: hidden;
+}
+details.ficha summary {
+  padding: 15px 22px;
+  cursor: pointer;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--ink);
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+details.ficha summary::before { content: '▸'; color: var(--pine-500); transition: transform 0.2s var(--ease); }
+details.ficha[open] summary { border-bottom: 1px solid var(--line); background: var(--surface); }
+details.ficha[open] summary::before { transform: rotate(90deg); }
+.ficha-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 1px; background: var(--line); }
+.ficha-grid > div { background: var(--surface); padding: 13px 18px; }
+.ficha-grid dt { font-family: var(--font-mono); font-size: 0.66rem; text-transform: uppercase; letter-spacing: 0.09em; color: var(--muted); }
+.ficha-grid dd { margin: 5px 0 0; font-size: 0.88rem; color: var(--ink-2); }
+details.ficha .ficha-src { padding: 12px 22px; background: var(--surface); }
+
+/* ============ OBSERVATÓRIO: tabelas ============ */
+.tbl tbody tr:nth-child(even) td { background: var(--paper-2); }
+.tbl td { color: var(--ink-2); }
+
 /* ============ LISTA EDITORIAL (trilhas) ============ */
 .editorial-list { display: grid; gap: 4px; }
 .editorial-list a {

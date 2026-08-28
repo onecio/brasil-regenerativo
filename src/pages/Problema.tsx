@@ -27,7 +27,7 @@ const QUEM_FAZ = [
 export default function Problema() {
   return (
     <>
-      <section className="section">
+      <section className="section page-top">
         <div className="wrap">
           <SectionHead
             kicker="Diagnóstico"

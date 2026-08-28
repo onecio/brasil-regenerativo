@@ -6,6 +6,7 @@ import { SliderCtl, ChipGroup, ResultCard } from '../components/Sim';
 import { calcCoop, PRECO_CARBONO_BRL } from '../utils/carbon';
 import { fmtTons, fmtMoney } from '../utils/format';
 import { SourceList } from '../components/SourceRef';
+import FichaTecnica from '../components/FichaTecnica';
 
 export default function Cooperativa() {
   const [membros, setMembros] = useState(200);
@@ -21,7 +22,7 @@ export default function Cooperativa() {
   const p = PRECO_CARBONO_BRL[preco];
 
   return (
-    <section className="section">
+    <section className="section page-top">
       <div className="wrap">
         <SectionHead
           kicker="Simulador · Tese central"
@@ -34,7 +35,12 @@ export default function Cooperativa() {
               nunca tratar estimativa como promessa financeira.
             </>
           }
-        />
+        >
+          <div className="meta">
+            <NatureTag kind="cenario" />
+            <span className="chip" style={{ cursor: 'default' }}>Preços parametrizáveis · 3 cenários</span>
+          </div>
+        </SectionHead>
 
         <div style={{ marginBottom: 24 }}>
           <FlowDiagram steps={['Indivíduo', 'Cooperativa', 'Assistência técnica', 'MRV', 'Agregação', 'Certificação', 'Registro', 'Mercado', 'Receita', 'Distribuição']} label="Cadeia cooperativa" />
@@ -42,7 +48,7 @@ export default function Cooperativa() {
 
         <div className="sim">
           <div className="sim-controls">
-            <h3 style={{ marginTop: 0 }}>Premissas</h3>
+            <h3 className="ctl-group">Premissas</h3>
             <SliderCtl label="Membros" value={membros} min={10} max={5000} step={10} onChange={setMembros} />
             <SliderCtl label="Hectares agregados" value={ha} min={50} max={50000} step={50} onChange={setHa} />
             <SliderCtl label="t CO₂e por ha/ano" value={tHa} min={0.2} max={10} step={0.1} onChange={setTHa} />
@@ -86,6 +92,18 @@ export default function Cooperativa() {
             </details>
 
             <SourceList ids={[18, 13, 14, 15, 17]} />
+            <FichaTecnica
+              premissas={[
+                { k: 'Redução/remoção', v: 't CO₂e/ha/ano ajustável (0,2–10)' },
+                { k: 'Preço conservador', v: 'R$ 25/t CO₂e' },
+                { k: 'Preço referência', v: 'R$ 60/t CO₂e' },
+                { k: 'Preço otimista', v: 'R$ 120/t CO₂e' },
+                { k: 'Custos', v: 'MRV + certificação/auditoria + operação (ajustáveis)' },
+                { k: 'Reserva', v: 'Percentual da receita bruta retido pela cooperativa' },
+              ]}
+              fontes={[18, 13, 14, 15, 17]}
+              nota="Faixas de preço baseadas no State and Trends of Carbon Pricing (Banco Mundial) e mercado voluntário. Nenhum valor é promessa: receita depende de metodologia, adicionalidade, MRV aprovado, verificação, registro e preço no momento da venda."
+            />
           </div>
         </div>
       </div>

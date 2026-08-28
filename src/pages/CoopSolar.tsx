@@ -6,6 +6,7 @@ import { SliderCtl, ResultCard } from '../components/Sim';
 import { calcSolar } from '../utils/carbon';
 import { fmtNum, fmtTons, fmtMoney } from '../utils/format';
 import { SourceList } from '../components/SourceRef';
+import FichaTecnica from '../components/FichaTecnica';
 
 export default function CoopSolar() {
   const [kw, setKw] = useState(300);
@@ -15,7 +16,7 @@ export default function CoopSolar() {
   const r = calcSolar({ potenciaKw: kw, familias, fatorAutoconsumo: autoconsumo, paybackAnos: 6 });
 
   return (
-    <section className="section">
+    <section className="section page-top">
       <div className="wrap">
         <SectionHead
           kicker="Simulador"
@@ -28,7 +29,12 @@ export default function CoopSolar() {
               regional → menos emissões.
             </>
           }
-        />
+        >
+          <div className="meta">
+            <NatureTag kind="estimativa" />
+            <span className="chip" style={{ cursor: 'default' }}>Marco: Lei 14.300/2022 (geração compartilhada)</span>
+          </div>
+        </SectionHead>
 
         <div style={{ marginBottom: 24 }}>
           <FlowDiagram steps={['Financiamento', 'Infraestrutura solar', 'Cooperativa administra', 'Energia p/ famílias e produtores', 'Custo menor', 'Desenvolvimento regional', 'Emissões evitadas']} label="Fluxo da cooperativa solar" />
@@ -36,7 +42,7 @@ export default function CoopSolar() {
 
         <div className="sim">
           <div className="sim-controls">
-            <h3 style={{ marginTop: 0 }}>Configuração</h3>
+            <h3 className="ctl-group">Configuração</h3>
             <SliderCtl label="Potência instalada" value={kw} min={10} max={5000} step={10} unit="kWp" onChange={setKw} />
             <SliderCtl label="Famílias/unidades atendidas" value={familias} min={5} max={2000} step={5} onChange={setFamilias} />
             <SliderCtl label="Fator de autoconsumo" value={autoconsumo} min={0.2} max={1} step={0.05} onChange={setAutoconsumo} format={(v) => `${Math.round(v * 100)}%`} />
@@ -65,6 +71,17 @@ export default function CoopSolar() {
             </details>
 
             <SourceList ids={[10, 26, 27, 9]} />
+            <FichaTecnica
+              premissas={[
+                { k: 'Produtividade', v: '1.450 kWh/kWp/ano (média Brasil)' },
+                { k: 'Custo instalado', v: 'R$ 4.200/kWp (referência 2024–25)' },
+                { k: 'Fator do SIN', v: '0,10 t CO₂e/MWh (estimativa conservadora)' },
+                { k: 'Tarifa residencial', v: 'R$ 0,80/kWh (média, simplificação)' },
+                { k: 'Referência real', v: 'COOPESMA (RO) e 17 cooperativas em SC (5.080 cooperados) — Lei 14.300/2022' },
+              ]}
+              fontes={[10, 26, 27, 9, 44]}
+              nota="Payback sem financiamento, impostos e manutenção. Modelo de cooperativa com capital público é proposta conceitual — exige engenharia, jurídico e governança."
+            />
           </div>
         </div>
       </div>

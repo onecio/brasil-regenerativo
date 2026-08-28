@@ -19,7 +19,7 @@ export default function Painel() {
   const matriz = MATRIZ_ELETRICA.map((m) => ({ name: m.label, value: m.value }));
 
   return (
-    <section className="section">
+    <section className="section page-top">
       <div className="wrap">
         <SectionHead
           kicker="Dados observados"

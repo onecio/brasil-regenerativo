@@ -5,6 +5,7 @@ import { SliderCtl, ChipGroup, ResultCard } from '../components/Sim';
 import { calcPegada, DIETA } from '../utils/carbon';
 import { fmtTons, fmtNum } from '../utils/format';
 import { SourceList } from '../components/SourceRef';
+import FichaTecnica from '../components/FichaTecnica';
 
 export default function Pegada() {
   const [carroKm, setCarroKm] = useState(10000);
@@ -36,7 +37,7 @@ export default function Pegada() {
   const diferenca = atual.total - cenario.total;
 
   return (
-    <section className="section">
+    <section className="section page-top">
       <div className="wrap">
         <SectionHead
           kicker="Simulador"
@@ -48,11 +49,16 @@ export default function Pegada() {
               grandeza, não uma medição pessoal.
             </>
           }
-        />
+        >
+          <div className="meta">
+            <NatureTag kind="estimativa" />
+            <span className="chip" style={{ cursor: 'default' }}>Fatores com fonte declarada</span>
+          </div>
+        </SectionHead>
 
         <div className="sim">
           <div className="sim-controls">
-            <h3 style={{ marginTop: 0 }}>Mobilidade</h3>
+            <h3 className="ctl-group">Mobilidade</h3>
             <ChipGroup label="Combustível do carro" value={carroTipo} onChange={setCarroTipo}
               options={[{ value: 'carro_gasolina', label: 'Gasolina' }, { value: 'carro_etanol', label: 'Etanol' }, { value: 'carro_diesel', label: 'Diesel' }]} />
             <SliderCtl label="Carro (km/ano)" value={carroKm} min={0} max={40000} step={500} onChange={setCarroKm} />
@@ -61,12 +67,12 @@ export default function Pegada() {
             <SliderCtl label="Metrô (km/ano)" value={metroKm} min={0} max={15000} step={200} onChange={setMetroKm} />
             <SliderCtl label="Avião doméstico (km/ano)" value={aviaoKm} min={0} max={30000} step={500} onChange={setAviaoKm} />
 
-            <h3>Energia</h3>
+            <h3 className="ctl-group">Energia</h3>
             <SliderCtl label="Consumo elétrico (kWh/mês)" value={kwh} min={0} max={1000} step={10} onChange={setKwh} />
             <ChipGroup label="Geração própria" value={solar ? 'sim' as const : 'nao' as const} onChange={(v) => setSolar(v === 'sim')}
               options={[{ value: 'nao', label: 'Sem solar' }, { value: 'sim', label: 'Com solar' }]} />
 
-            <h3>Alimentação e consumo</h3>
+            <h3 className="ctl-group">Alimentação e consumo</h3>
             <ChipGroup label="Padrão alimentar" value={dieta} onChange={setDieta}
               options={[{ value: 'onivora_alta', label: 'Onívora alta' }, { value: 'onivora', label: 'Onívora' }, { value: 'onivora_baixa', label: 'Onívora baixa' }, { value: 'vegetariana', label: 'Vegetariana' }, { value: 'vegana', label: 'Vegana' }]} />
             <SliderCtl label="Orgânicos p/ aterro (kg/semana)" value={orgAterro} min={0} max={15} step={0.5} onChange={setOrgAterro} />
@@ -120,6 +126,19 @@ export default function Pegada() {
             </div>
 
             <SourceList ids={[21, 22, 23, 24]} />
+            <FichaTecnica
+              premissas={[
+                { k: 'Carro gasolina', v: '0,18 kg CO₂e/km (faixa nacional)' },
+                { k: 'Ônibus', v: '0,10 kg CO₂e/pass-km' },
+                { k: 'Metrô', v: '0,028 kg CO₂e/pass-km (matriz elétrica)' },
+                { k: 'Avião doméstico', v: '0,18 kg CO₂e/pass-km' },
+                { k: 'Energia', v: 'Fator do SIN 0,10 t CO₂e/MWh; solar reduz fator em 70% (educacional)' },
+                { k: 'Dieta', v: 'Scarborough et al. 2014: 1,5–3,3 kg CO₂e/dia conforme padrão' },
+                { k: 'Resíduos', v: 'Aterro 0,5 kg CO₂e/kg orgânico; reciclagem com crédito parcial educacional' },
+              ]}
+              fontes={[21, 22, 23, 24]}
+              nota="Fatores agregados de literatura — servem para ordem de grandeza e comparação de cenários, não para inventário pessoal."
+            />
           </div>
         </div>
       </div>

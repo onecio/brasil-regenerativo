@@ -35,7 +35,7 @@ export default function Mercados() {
   const [ctx, setCtx] = useState<Ctx>('brasil');
 
   return (
-    <section className="section">
+    <section className="section page-top">
       <div className="wrap">
         <SectionHead
           kicker="Como funcionam os mercados"

@@ -22,7 +22,7 @@ const DISTRIBUIR = [
 export default function Justica() {
   return (
     <>
-      <section className="section">
+      <section className="section page-top">
         <div className="wrap">
           <SectionHead
             kicker="Justiça climática"
@@ -81,7 +81,7 @@ export default function Justica() {
           </div>
         </div>
       </section>
-      <section className="section">
+      <section className="section page-top">
         <div className="wrap">
           <SourceList ids={[19, 20]} />
         </div>

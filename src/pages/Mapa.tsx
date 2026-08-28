@@ -52,7 +52,7 @@ export default function Mapa() {
   const estado = LOCATIONS.find((l) => l.id === sel);
 
   return (
-    <section className="section">
+    <section className="section page-top">
       <div className="wrap">
         <SectionHead
           kicker="Território"

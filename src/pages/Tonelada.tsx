@@ -41,7 +41,7 @@ export default function Tonelada() {
   const tCarro = kmCarro * 0.18 / 1000;
 
   return (
-    <section className="section">
+    <section className="section page-top">
       <div className="wrap">
         <SectionHead
           kicker="Educação climática"

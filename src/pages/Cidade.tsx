@@ -3,6 +3,7 @@ import SectionHead from '../components/SectionHead';
 import NatureTag from '../components/NatureTag';
 import { fmtMoney, fmtPct } from '../utils/format';
 import { SourceList } from '../components/SourceRef';
+import FichaTecnica from '../components/FichaTecnica';
 
 interface Investimento {
   id: string;
@@ -68,7 +69,7 @@ export default function Cidade() {
   }
 
   return (
-    <section className="section">
+    <section className="section page-top">
       <div className="wrap">
         <SectionHead
           kicker="Jogo · Simulador"
@@ -81,7 +82,12 @@ export default function Cidade() {
               pontuações relativas, não previsões.
             </>
           }
-        />
+        >
+          <div className="meta">
+            <NatureTag kind="cenario" />
+            <span className="chip" style={{ cursor: 'default' }}>Impactos relativos (0–100 pts)</span>
+          </div>
+        </SectionHead>
 
         <div style={{ display: 'grid', gridTemplateColumns: '340px 1fr', gap: 24, alignItems: 'start' }}>
           <div className="sim-controls" style={{ position: 'sticky', top: 90 }}>
@@ -136,6 +142,16 @@ export default function Cidade() {
             </div>
 
             <SourceList ids={[9, 8, 11, 10]} />
+            <FichaTecnica
+              premissas={[
+                { k: 'Orçamento', v: 'R$ 120 mi (cenário de investimento climático municipal)' },
+                { k: 'Investimentos', v: '12 opções, R$ 6–30 mi cada' },
+                { k: 'Impactos', v: 'Pontuação relativa 0–100 por indicador (não é previsão)' },
+                { k: 'Mensagem', v: 'Boa gestão climática também é gestão fiscal' },
+              ]}
+              fontes={[9, 8, 11, 10]}
+              nota="Jogo educacional inspirado em políticas reais (Fundo Clima, BNDES, ICMS Ecológico). Os números não representam estudos de viabilidade municipais."
+            />
           </div>
         </div>
       </div>

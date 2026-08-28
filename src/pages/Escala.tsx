@@ -5,6 +5,7 @@ import FlowDiagram from '../components/FlowDiagram';
 import { SliderCtl, ResultCard } from '../components/Sim';
 import { fmtNum, fmtTons, fmtMoney } from '../utils/format';
 import { SourceList } from '../components/SourceRef';
+import FichaTecnica from '../components/FichaTecnica';
 
 const NIVEIS = [
   { n: 1, label: '1 propriedade', desc: 'Pouca escala: custo fixo de MRV e certificação inviabiliza projeto isolado na maioria das metodologias.' },
@@ -25,7 +26,7 @@ export default function Escala() {
   const nivel = propriedades <= 100 ? 0 : propriedades <= 1000 ? 1 : propriedades <= 5000 ? 2 : 3;
 
   return (
-    <section className="section">
+    <section className="section page-top">
       <div className="wrap">
         <SectionHead
           kicker="Diagnóstico · Simulação"
@@ -37,7 +38,11 @@ export default function Escala() {
               <strong>agregação</strong>: cooperativa, MRV compartilhado, financiamento e tecnologia.
             </>
           }
-        />
+        >
+          <div className="meta">
+            <NatureTag kind="cenario" />
+          </div>
+        </SectionHead>
 
         <NatureTag kind="cenario" />
         <p style={{ fontSize: '0.85rem', color: 'var(--ink-soft)', marginTop: 8 }}>
@@ -92,6 +97,16 @@ export default function Escala() {
               </p>
             </div>
             <SourceList ids={[13, 14, 18, 7]} />
+            <FichaTecnica
+              premissas={[
+                { k: 'Propriedades', v: '1 a 10.000 (ajustável)' },
+                { k: 'Hectares/propriedade', v: '2 a 200' },
+                { k: 'Redução/remoção', v: '0,5 a 10 t CO₂e/ha/ano' },
+                { k: 'Custo fixo anual', v: 'R$ 30 mil a R$ 1 mi (MRV + certificação + operação)' },
+              ]}
+              fontes={[13, 14, 18, 7]}
+              nota="A agregação reduz custo por tonelada, mas não garante metodologia aprovada, adicionalidade, preço ou repartição — cada elo depende de regras, padrão e negociação."
+            />
           </div>
         </div>
 
